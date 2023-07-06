@@ -1,0 +1,45 @@
+name: "Build and publish npm package"
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - README.md'
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - README.md'
+
+jobs:
+  build_publish:
+    name: Build and publish npm package
+    runs-on: ubuntu-latest    
+    
+    steps:      
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 18.x
+    
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run tests
+      run: npm run test
+    
+    - name: Build package
+      run: npm run build
+    
+    - name: Publish package to npm
+      uses: JS-DevTools/npm-publish@v2
+      with:
+        token: ${{ secrets.NPM_TOKEN }}
+  
+    - if: ${{ steps.publish.outputs.type }}
+      run: |
+        echo "Version changed!"
