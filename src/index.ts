@@ -24,7 +24,7 @@ if (options.file) {
   console.log('SUMMARY:')
   console.log(result.summary)
   console.log()
-  console.log('DETAILS:')
+  result.errorObject ? console.log('DETAILS:') : undefined
   result.errorObject?.forEach(error => {
     console.log(error.message)
     error.details.forEach(errorSections => {      
