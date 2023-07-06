@@ -7,6 +7,7 @@
     "markdown-list-linter": "./dist/index.js"
   },
   "scripts": {
+    "build:dev": "tsc --project tsconfig.json --watch",
     "build": "tsc --project tsconfig.json",
     "test": "jest"
   },
@@ -28,15 +29,15 @@
   "keywords": [
       "markdown"
   ],
+  "dependencies": {
+    "commander": "^11.0.0",
+    "markdown-list-linter": "0.0.2"
+  },
   "devDependencies": {
     "@types/node": "^20.4.0",
     "typescript": "^5.1.6",
     "@types/jest": "^29.5.2",
     "jest": "^29.5.0",
     "ts-jest": "^29.1.1"
-  },
-  "dependencies": {
-    "commander": "^11.0.0",
-    "markdown-list-linter": "^0.0.1"
-  }
+  }  
 }
