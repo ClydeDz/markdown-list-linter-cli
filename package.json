@@ -10,7 +10,8 @@
     "compile": "tsc --project tsconfig.json",
     "compile:dev": "tsc --project tsconfig.json --watch",
     "minify": "esbuild \"lib/index.js\" --minify --outfile=\"lib/index.min.js\"",
-    "build": "npm run compile && npm run minify",    
+    "build": "npm run compile && npm run minify",   
+    "setup": "npm run build && npm install -g .",    
     "test": "jest"
   },
   "files": [
