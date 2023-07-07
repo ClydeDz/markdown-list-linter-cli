@@ -1,26 +1,25 @@
 # Animals
-A simple list of correctly ordered animals
+A simple list of unordered list items
 
 ## A
-- Aardvark
-- African Buffalo
-- Aardwolf
-- African Elephant
+- [Aardvark]('https://www.Aardvark.com')
+- [African Buffalo]('https://www.AfricanBuffalo.com')
+- [Aardwolf]('https://www.Aardwolf.com')
+- [African Elephant]('https://www.AfricanElephant.com')
 
 ## B
-- Baboon
-- Bactrian Camel
-- Badger
-- Bald Eagle
+- [Baboon]('https://www.Baboon.com')
+- [Bactrian Camel]('https://www.BactrianCamel.com')
+- [Badger]('https://www.Badger.com')
+- [Bald Eagle]('https://www.BaldEagle.com')
 
 ## C
-- Chameleon
-- Camel
-- Cheetah
-- Canary
+- [Chameleon]('https://www.Chameleon.com')
+- [Camel]('https://www.Camel.com')
+- [Cheetah]('https://www.Cheetah.com')
+- [Canary]('https://www.Canary.com')
 
 ## D
-- Damselfly
-- Deer
-- Dingo
-- Dinosaur
+- [Damselfly]('https://www.Damselfly.com')
+- [Deer]('https://www.Deer.com')
+- [Dingo]('https://www.Dingo.com')

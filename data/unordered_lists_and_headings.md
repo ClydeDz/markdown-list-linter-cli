@@ -1,5 +1,5 @@
 # Animals
-A simple list of correctly ordered animals
+A simple list of unordered headings and list items
 
 ## D
 - Aardvark
