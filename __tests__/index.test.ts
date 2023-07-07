@@ -25,7 +25,8 @@ describe("markdown-list-linter CLI tool", () => {
 
         const helpText = [
             'Usage: markdown-list-linter [options]',
-            'Tbc',
+            'CLI tool to lint markdown lists to warn when list items are not alphabetically',
+            'ordered',
             'Options:',
             '-V, --version        output the version number',
             '-f, --file  [value]  path to the markdown file that needs to be linted',
