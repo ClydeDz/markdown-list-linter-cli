@@ -6,12 +6,12 @@
   "bin": {
     "markdown-list-linter": "./lib/index.min.js"
   },
-  "scripts": {    
+  "scripts": {
     "compile": "tsc --project tsconfig.json",
     "compile:dev": "tsc --project tsconfig.json --watch",
     "minify": "esbuild \"lib/index.js\" --minify --outfile=\"lib/index.min.js\"",
-    "build": "npm run compile && npm run minify",   
-    "setup": "npm run build && npm install -g .",    
+    "build": "npm run compile && npm run minify",
+    "setup": "npm run build && npm install -g .",
     "test": "jest"
   },
   "files": [
@@ -37,6 +37,7 @@
     "markdown-list-linter": "0.0.4"
   },
   "devDependencies": {
+    "@gmrchk/cli-testing-library": "^0.1.2",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.4.0",
     "esbuild": "^0.18.11",

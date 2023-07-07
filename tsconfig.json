@@ -1,12 +1,12 @@
 {
     "compilerOptions": {
-      "strict": true,
-      "target": "es6",
-      "module": "CommonJS",
       "sourceMap": false,
       "esModuleInterop": true,
       "moduleResolution": "node",
       "outDir": "lib",
+      "target": "es2021", 
+      "module": "commonjs",
+      "strict": true, 
     }, 
     "include": ["src/**/*"],
     "exclude": ["!src/**/*"]
