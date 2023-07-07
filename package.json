@@ -2,19 +2,19 @@
   "name": "markdown-list-linter-cli",
   "version": "0.0.3",
   "description": "CLI tool to lint markdown lists to warn when list items are not alphabetically ordered",
-  "main": "dist/index.min.js",
+  "main": "lib/index.min.js",
   "bin": {
-    "markdown-list-linter": "./dist/index.min.js"
+    "markdown-list-linter": "./lib/index.min.js"
   },
   "scripts": {    
     "compile": "tsc --project tsconfig.json",
     "compile:dev": "tsc --project tsconfig.json --watch",
-    "minify": "esbuild \"dist/index.js\" --minify --outfile=\"dist/index.min.js\"",
+    "minify": "esbuild \"lib/index.js\" --minify --outfile=\"lib/index.min.js\"",
     "build": "npm run compile && npm run minify",    
     "test": "jest"
   },
   "files": [
-    "dist/**/*.min.js",
+    "lib/**/*.min.js",
     "LICENSE",
     "README.md"
   ],
