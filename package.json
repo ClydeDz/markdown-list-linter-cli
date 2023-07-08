@@ -1,6 +1,6 @@
 {
   "name": "markdown-list-linter-cli",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "CLI tool to lint markdown lists to warn when list items are not alphabetically ordered",
   "main": "lib/index.min.js",
   "bin": {
@@ -29,7 +29,19 @@
     "url": "git+https://github.com/ClydeDz/markdown-list-linter-cli.git"
   },
   "keywords": [
-    "markdown"
+    "markdown",
+    "markdown cli",
+    "markdown linter",
+    "cli tool for markdown files",
+    "cli tool",
+    "markdown lists",
+    "markdown list linter",
+    "alphabetically order markdown list",
+    "sort markdown lists",
+    "order markdown lists",
+    "cli tool to order markdown list",
+    "cli tool to sort markdown list",
+    "cli tool to alphabetically sort markdown list"
   ],
   "dependencies": {
     "commander": "^11.0.0",
