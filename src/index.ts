@@ -2,12 +2,13 @@
 
 import { lintMarkdownList } from "markdown-list-linter"
 import { Command } from "commander"
+const packageJson = require("../package.json");
 
 const program = new Command()
 
 program
   .name('markdown-list-linter')
-  .version("0.0.7")
+  .version(packageJson.version)
   .description("CLI tool to lint markdown lists to warn when list items are not alphabetically ordered")
   .option("-f, --file  [value]", "path to the markdown file that needs to be linted")
   .parse(process.argv)
