@@ -139,4 +139,29 @@ describe("markdown-list-linter CLI tool", () => {
         expect(code).toBe(0);
         expect(stdout).toMatchObject(expectedOutput)
     });
+
+    it('should display no errors found when valid file with no list is passed', async () => {
+        const { code, stdout } = await execute(
+            'node',
+            `${MARKDOWN_LINT_CLI_TOOL} -f ./data/no_list.md`
+        );
+
+        const expectedOutput = [
+            'SUMMARY:',
+            'No errors found',
+            ]
+        
+        expect(code).toBe(0);
+        expect(stdout).toMatchObject(expectedOutput)
+    });
+
+    it('should throw an error when non-existent file is passed', async () => {
+        const { code, stderr } = await execute(
+            'node',
+            `${MARKDOWN_LINT_CLI_TOOL} -f ./data/this_file_does_not_exist.md`
+        );
+
+        expect(code).toBe(1);
+        expect(JSON.stringify(stderr)).toContain('Error: ENOENT: no such file or directory')
+    });
 });
