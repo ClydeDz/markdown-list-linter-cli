@@ -22,24 +22,5 @@ if (!process.argv.slice(2).length) {
 if (options.file) {
   const filepath = typeof options.file === "string" ? options.file : __dirname
   const result = lintMarkdownList(filepath)
-
-  let outputBuilder = ''  
-  outputBuilder += 'SUMMARY:\n' + result.summary + '\n'  
-  result.errorObject ? outputBuilder += '\nDETAILS:\n' : undefined
-
-  result.errorObject?.forEach(error => {
-    outputBuilder += error.message + '\n'
-    
-    error.details.forEach((errorSections, index) => {      
-      outputBuilder +=  '\tSection #' + (index + 1) + '\n'
-
-      errorSections.forEach(errorItem => {
-        outputBuilder +=  '\t\t' + errorItem + '\n'
-      })
-
-      outputBuilder += '\n'
-    })
-  })
-
-  console.log(outputBuilder)
+  console.log(result.formattedMessage)
 }
