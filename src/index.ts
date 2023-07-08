@@ -7,7 +7,7 @@ const program = new Command()
 
 program
   .name('markdown-list-linter')
-  .version("0.0.5")
+  .version("0.0.7")
   .description("CLI tool to lint markdown lists to warn when list items are not alphabetically ordered")
   .option("-f, --file  [value]", "path to the markdown file that needs to be linted")
   .parse(process.argv)

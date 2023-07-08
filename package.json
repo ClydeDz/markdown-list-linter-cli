@@ -1,6 +1,6 @@
 {
   "name": "markdown-list-linter-cli",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "CLI tool to lint markdown lists to warn when list items are not alphabetically ordered",
   "main": "lib/index.min.js",
   "bin": {
