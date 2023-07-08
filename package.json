@@ -45,7 +45,7 @@
   ],
   "dependencies": {
     "commander": "^11.0.0",
-    "markdown-list-linter": "0.0.4"
+    "markdown-list-linter": "0.1.0"
   },
   "devDependencies": {
     "@gmrchk/cli-testing-library": "^0.1.2",
