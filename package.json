@@ -9,6 +9,8 @@
   "scripts": {
     "pretty": "prettier --check .",
     "pretty:fix": "prettier --write .",
+    "lint": "eslint . -c .eslintrc.js",
+    "lint:fix": "eslint . -c .eslintrc.js --fix",
     "compile": "tsc --project tsconfig.json",
     "minify": "esbuild \"lib/index.js\" --minify --outfile=\"lib/index.min.js\"",
     "build": "npm run compile && npm run minify",
@@ -50,9 +52,11 @@
     "markdown-list-linter": "0.1.0"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.22.7",
     "@gmrchk/cli-testing-library": "^0.1.2",
     "@types/jest": "^29.5.2",
     "@types/node": "^20.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.61.0",
     "esbuild": "^0.18.11",
     "jest": "^29.5.0",
     "prettier": "^3.0.0",

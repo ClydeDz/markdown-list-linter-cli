@@ -2,6 +2,7 @@
 
 import { lintMarkdownList } from 'markdown-list-linter'
 import { Command } from 'commander'
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const packageJson = require('../package.json')
 
 const program = new Command()
@@ -27,5 +28,6 @@ if (!process.argv.slice(2).length) {
 if (options.file) {
   const filepath = typeof options.file === 'string' ? options.file : __dirname
   const result = lintMarkdownList(filepath)
+  // eslint-disable-next-line no-console
   console.log(result.formattedMessage)
 }
