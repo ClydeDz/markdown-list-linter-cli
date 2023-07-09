@@ -1,4 +1,4 @@
-name: "Build and publish npm package"
+name: 'Build and publish npm package'
 
 on:
   push:
@@ -15,32 +15,32 @@ on:
 jobs:
   build_publish:
     name: Build and publish npm package
-    runs-on: ubuntu-latest    
-    
-    steps:      
-    - name: Checkout code
-      uses: actions/checkout@v3
-    
-    - name: Install Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: 18.x
-    
-    - name: Install dependencies
-      run: npm ci
+    runs-on: ubuntu-latest
 
-    - name: Build and minify package
-      run: npm run build
-      
-    - name: Run tests
-      run: npm run test 
-    
-    - name: Publish package to npm
-      id: publish
-      uses: JS-DevTools/npm-publish@v2
-      with:
-        token: ${{ secrets.NPM_TOKEN }}
-  
-    - if: ${{ steps.publish.outputs.type }}
-      run: |
-        echo "Version changed!"
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18.x
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build and minify package
+        run: npm run build
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Publish package to npm
+        id: publish
+        uses: JS-DevTools/npm-publish@v2
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+
+      - if: ${{ steps.publish.outputs.type }}
+        run: |
+          echo "Version changed!"

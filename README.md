@@ -6,11 +6,11 @@ Command line interface (CLI) tool to lint markdown lists and warn when list item
 
 This functionality is available to be consumed in three different ways:
 
-* ⚡ [A GitHub Action](https://github.com/marketplace/actions/markdown-list-linter) as part of your CI/CD process
+- ⚡ [A GitHub Action](https://github.com/marketplace/actions/markdown-list-linter) as part of your CI/CD process
 
-* 📦 [An NPM package](https://www.npmjs.com/package/markdown-list-linter) that can be consumed in your JavaScript or TypeScript code
+- 📦 [An NPM package](https://www.npmjs.com/package/markdown-list-linter) that can be consumed in your JavaScript or TypeScript code
 
-* 💻 [A CLI](https://www.npmjs.com/package/markdown-list-linter-cli) that you can run in your terminal
+- 💻 [A CLI](https://www.npmjs.com/package/markdown-list-linter-cli) that you can run in your terminal
 
 ## Installation
 
@@ -46,7 +46,7 @@ When there are errors the returned object should look something like this.
 ```
 SUMMARY:
 Markdown list needs to be sorted
-            
+
 DETAILS:
 Please correct the alphabetical order for these heading items
     Section #1
@@ -67,7 +67,7 @@ Please correct the alphabetical order for these list items
         Canary
 ```
 
-The items in each section are the items in the list which need to be reordered. 
+The items in each section are the items in the list which need to be reordered.
 
 For help command, type the following.
 
